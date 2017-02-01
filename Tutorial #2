@@ -1,0 +1,21 @@
+#define buttonPin 10
+#define ledPin 8
+
+int inputState=0;
+
+void setup() {
+  pinMode(buttonPin,INPUT);
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  inputState=digitalRead(buttonPin);
+  
+   if(inputState==1){ //button pressed
+    digitalWrite(ledPin, HIGH); //l.e.d. is turned on
+  }if(inputState==0){ //button is not pressed
+    digitalWrite(ledPin, LOW); //l.e.d. is turned off
+    }
+    
+  delay(100); //0.1s
+}
