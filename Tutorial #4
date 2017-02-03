@@ -1,0 +1,20 @@
+void setup() {
+  Serial.begin(9600); //9600, 19200, 38400, 57600, 115200 are other speeds that are commonly used, and are Arduino ide supported.
+}
+
+void loop() {
+  Serial.print("Electrical Engineer \b"); //Decimal
+  Serial.print(12,HEX); //convert to hexadecimal 
+  Serial.print(12,OCT); //convert to octal 
+  Serial.print(12,BIN); //convert to binary
+  //all still outputed ASCII encoding
+  delay(500); //0.5 second
+}
+/*
+Escape Codes:
+\n  newline
+\r  carriage return
+\t  tab
+\v  vertical tab
+\b  backspace
+*/
