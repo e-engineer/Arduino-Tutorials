@@ -1,0 +1,15 @@
+#define analogOutPin 10
+#define analogInPin A3
+
+int readValue=0;
+
+void setup() {
+  pinMode(analogOutPin, OUTPUT);
+
+}
+
+void loop() {
+  readValue=analogRead(analogInPin);
+  analogWrite(analogOutPin, readValue/4);
+
+}
